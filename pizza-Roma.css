@@ -1,0 +1,24 @@
+body {
+    background-color: blanchedalmond;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.marquee {
+     animation: marquee-scroll 30s linear infinite;
+                align-items: center;
+                display: flex;
+            }
+.relative:hover .marquee {
+    animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+    from { transform: translateX(0%); }
+    to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 640px) {
+    .marquee { animation-duration: 40s; }
+    .marquee img { width: 11rem; height: 7rem; }
+}
+.relative::-webkit-scrollbar { display: none; }
