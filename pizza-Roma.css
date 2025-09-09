@@ -6,9 +6,9 @@ body {
 }
 .marquee {
      animation: marquee-scroll 30s linear infinite;
-                align-items: center;
-                display: flex;
-            }
+    align-items: center;
+    display: flex;
+}
 .relative:hover .marquee {
     animation-play-state: paused;
 }
@@ -21,4 +21,28 @@ body {
     .marquee { animation-duration: 40s; }
     .marquee img { width: 11rem; height: 7rem; }
 }
+@keyframes scroll-up {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-50%); }
+            }
+            .reviews-wrap { display: block; }
+            .reviews-wrap > .space-y-4 { width: 100%; }
 .relative::-webkit-scrollbar { display: none; }
+.relative { -ms-overflow-style: none; scrollbar-width: none; }
+ @keyframes scroll-up {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+            }
+            @keyframes scroll-down {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+            }
+            .reviews-track {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            }
+            .reviews-wrap {
+            will-change: transform;
+            }
+            .review-stars { color: #f59e0b; font-size: .9rem; line-height: 1; }
